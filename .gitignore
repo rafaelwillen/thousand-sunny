@@ -1,0 +1,5 @@
+#Vs Code Files
+.vscode/
+
+#Node Modules
+node_modules/
