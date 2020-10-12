@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Fictional tourism landing page",
   "main": "index.js",
+  "homepage": "https://rafaelwillen.github.io/thousand-sunny",
   "scripts": {
-    "sass": "node-sass -w scss/main.scss -o dist/css --quiet --recursive --output-style compressed",
+    "sass": "node-sass -w scss/main.scss -o dist/css  --recursive --output-style compressed",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [

@@ -40,7 +40,7 @@ nav {
     }
 
     @include mediaMd {
-        // Make a menu button
+        // TODO: Make a menu button
         .nav-links {
             display: none;
         }
@@ -54,18 +54,27 @@ nav {
         "form hero-image";
     grid-template-columns: 1fr 2fr;
     gap: 1rem;
+    height: calc(100% - 120px);
 
     &-title {
         grid-area: hero-title;
         align-self: center;
         justify-self: center;
+
+        @include mediaMd {
+            text-align: center;
+        }
     }
 
     &-image {
         grid-area: hero-image;
         width: 70%;
         justify-self: center;
-        align-items: center;
+        align-self: center;
+
+        @include mediaMd {
+            display: none;
+        }
     }
 
     .form {
@@ -106,7 +115,25 @@ nav {
 
         input[type="submit"] {
             grid-area: submit;
+            @include mediaMd {
+                grid-column: 1 / 3;
+            }
         }
+
+        @include mediaSm {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    @include mediaMd {
+        grid-template-areas:
+            "hero-title"
+            "form";
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 }
 /* #endregion */
