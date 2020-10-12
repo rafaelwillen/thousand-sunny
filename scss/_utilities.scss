@@ -1,0 +1,92 @@
+// Text
+.xl-heading {
+    font-family: $heading-font-family;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 80px;
+    color: $heading-text-color;
+}
+
+.lg-heading {
+    font-family: $heading-font-family;
+    font-size: 2.25rem;
+    font-weight: bold;
+    line-height: 80px;
+    color: $heading-text-color;
+}
+
+.sm-heading {
+    font-family: $primary-fonheading-font-familyt-family;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: $heading-text-color;
+}
+
+.paragraph {
+    font-family: $secondary-font-family;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $default-text-color;
+}
+
+.lead-text {
+    font-family: $primary-font-family;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: $lead-text-color;
+}
+
+.footer-text {
+    font-family: $secondary-font-family;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 80px;
+    color: $footer-text-color;
+}
+
+// Links
+%link {
+    font-family: $primary-font-family;
+    display: inline-block;
+}
+
+.light-link {
+    @extend %link;
+    color: $light-link-color;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.current-link {
+    @extend %link;
+    color: $current-link-color;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.primary-link {
+    @extend %link;
+    color: $primary-color;
+    font-size: 1.0625rem;
+    font-weight: 600;
+}
+
+// Buttons
+%btn {
+    display: inline-block;
+    font-family: $secondary-font-family;
+    font-weight: 500;
+}
+
+.btn {
+    @extend %btn;
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: $primary-colors;
+}
