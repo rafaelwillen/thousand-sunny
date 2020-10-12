@@ -1,0 +1,112 @@
+@import "./config";
+@import "./utilities";
+@import "./form";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    font-size: 1rem;
+    background-color: $background-color;
+    color: set-text-color($background-color);
+}
+
+/* #region Header */
+header {
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 45px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        li {
+            margin: 0 0.8rem;
+        }
+    }
+
+    @include mediaMd {
+        // Make a menu button
+        .nav-links {
+            display: none;
+        }
+    }
+}
+
+.hero {
+    display: grid;
+    grid-template-areas:
+        "hero-title hero-image"
+        "form hero-image";
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+
+    &-title {
+        grid-area: hero-title;
+        align-self: center;
+        justify-self: center;
+    }
+
+    &-image {
+        grid-area: hero-image;
+        width: 70%;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .form {
+        grid-area: form;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+            "title title0"
+            "divider ."
+            "select1 select2"
+            "select3 date-input"
+            "submit .";
+        gap: 1rem;
+
+        h4 {
+            grid-area: title;
+            align-self: center;
+        }
+
+        .divider {
+            height: 1px;
+            width: 30px;
+            border-bottom: 3px solid $heading-text-color;
+            grid-area: divider;
+            align-self: center;
+        }
+
+        @for $i from 1 through 3 {
+            .select#{$i} {
+                grid-area: select#{$i};
+            }
+        }
+
+        input[type="date"] {
+            grid-area: date-input;
+        }
+
+        input[type="submit"] {
+            grid-area: submit;
+        }
+    }
+}
+/* #endregion */

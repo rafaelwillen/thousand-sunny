@@ -1,3 +1,11 @@
+// Container
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: $max-width;
+    overflow: hidden;
+}
+
 // Text
 .xl-heading {
     font-family: $heading-font-family;
@@ -16,8 +24,8 @@
 }
 
 .sm-heading {
-    font-family: $primary-fonheading-font-familyt-family;
-    font-size: 0.9rem;
+    font-family: $primary-font-family;
+    font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.6;
     color: $heading-text-color;
@@ -48,9 +56,24 @@
 }
 
 // Links
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
 %link {
     font-family: $primary-font-family;
     display: inline-block;
+    cursor: pointer;
+    @include ease-out;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .light-link {
@@ -80,13 +103,42 @@
     display: inline-block;
     font-family: $secondary-font-family;
     font-weight: 500;
+    cursor: pointer;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+    border: none;
+    @include ease-out;
 }
 
-.btn {
+.btn-light {
     @extend %btn;
+    background-color: #fff;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    padding: 0.25rem 1.5rem;
+
+    &:hover {
+        $new-color: darken(
+            $color: $primary-color,
+            $amount: 1,
+        );
+        background-color: $new-color;
+        color: set-text-color($new-color);
+        border-color: $new-color;
+    }
 }
 
 .btn-primary {
     @extend %btn;
-    background-color: $primary-colors;
+    background-color: $primary-color;
+    color: set-text-color(#fff);
+
+    &:hover {
+        $new-color: lighten(
+            $color: $primary-color,
+            $amount: 10,
+        );
+        background-color: $new-color;
+        color: set-text-color($new-color);
+    }
 }

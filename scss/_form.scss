@@ -1,8 +1,26 @@
 // Form
 
-input::placeholder {
+select,
+select *,
+input[type="date"] {
     font-family: $primary-font-family;
     font-size: 0.95rem;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 20px;
+    color: lighten($color: $default-text-color, $amount: 20);
+    padding: 0 0.5rem;
+    cursor: pointer;
+    border: 1px solid #aaa;
+}
+
+select {
+    //   Remove the default arrow
+    appearance: none;
+    //   This is the arrow icon
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 0.4rem;
+    background-color: $background-color;
+    padding: 0 1.25rem;
 }
