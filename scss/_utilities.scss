@@ -10,6 +10,10 @@
     }
 }
 
+.logo {
+    width: 45px;
+}
+
 // Text
 .xl-heading {
     font-family: $heading-font-family;
@@ -57,9 +61,9 @@
 
 .footer-text {
     font-family: $secondary-font-family;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
     font-weight: 300;
-    line-height: 80px;
+    line-height: 2.2;
     color: $footer-text-color;
 }
 
