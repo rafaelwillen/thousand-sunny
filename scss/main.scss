@@ -139,45 +139,6 @@ nav {
 /* #endregion */
 
 /* #region Main*/
-%text-along-img {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-
-    .section-img {
-        width: 50%;
-    }
-
-    .section-description * {
-        margin-bottom: 1rem;
-    }
-
-    &.reversed {
-        flex-direction: row-reverse;
-        @include mediaMd {
-            flex-direction: column;
-        }
-    }
-
-    @include mediaMd {
-        flex-direction: column;
-
-        .section-img {
-            width: 60%;
-        }
-    }
-
-    @include mediaSm {
-        .section-description h2 {
-            text-align: center;
-        }
-
-        .section-img {
-            display: none;
-        }
-    }
-}
-
 .text-along-img {
     @extend %text-along-img;
 }
@@ -186,4 +147,67 @@ nav {
     @extend %text-along-img;
 }
 
+.featured-destinations {
+    width: 100%;
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        @include mediaSm {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+    }
+    .section-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        // Then comes the card...
+    }
+
+    .card {
+        display: inline-block;
+        position: relative;
+        @include ease-out;
+        margin-bottom: 1rem;
+        img {
+            border-radius: 1rem;
+        }
+
+        &-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $background-color;
+            border-radius: 0 0.5rem 0 0;
+            padding: 0.4rem 0.8rem;
+
+            p:first-child {
+                font-family: $primary-font-family;
+                font-weight: 600;
+                color: $heading-text-color;
+                line-height: 1.5;
+                font-size: 0.9rem;
+            }
+
+            p:last-child {
+                font-family: $primary-font-family;
+                line-height: 1.2;
+                font-size: 0.9rem;
+                font-weight: 300;
+                color: $small-text-color;
+            }
+        }
+
+        &:hover {
+            // transform: scale(1.1);
+            opacity: 0.9;
+        }
+    }
+}
 /* #endregion */

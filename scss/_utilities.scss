@@ -77,6 +77,7 @@ ul {
 
     &:hover {
         text-decoration: underline;
+        padding: 0.2rem;
     }
 }
 
@@ -144,5 +145,45 @@ ul {
         );
         background-color: $new-color;
         color: set-text-color($new-color);
+    }
+}
+
+// Layout
+%text-along-img {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    .section-img {
+        width: 50%;
+    }
+
+    .section-description * {
+        margin-bottom: 1rem;
+    }
+
+    &.reversed {
+        flex-direction: row-reverse;
+        @include mediaMd {
+            flex-direction: column;
+        }
+    }
+
+    @include mediaMd {
+        flex-direction: column;
+
+        .section-img {
+            width: 60%;
+        }
+    }
+
+    @include mediaSm {
+        .section-description h2 {
+            text-align: center;
+        }
+
+        .section-img {
+            display: none;
+        }
     }
 }
