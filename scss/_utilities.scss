@@ -4,6 +4,10 @@
     margin: auto;
     max-width: $max-width;
     overflow: hidden;
+
+    @include mediaSm {
+        width: 90%;
+    }
 }
 
 // Text
@@ -37,7 +41,7 @@
 
 .paragraph {
     font-family: $secondary-font-family;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.6;
     color: $default-text-color;
@@ -186,4 +190,11 @@ ul {
             display: none;
         }
     }
+}
+
+%section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }

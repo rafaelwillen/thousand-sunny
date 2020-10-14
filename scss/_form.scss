@@ -39,3 +39,13 @@ input[type="date"] {
     @extend %form-input;
     appearance: none;
 }
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    i {
+        font-size: 1rem;
+        color: $heading-text-color;
+    }
+}
