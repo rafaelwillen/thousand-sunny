@@ -1,8 +1,5 @@
 // Form
-
-select,
-select *,
-input[type="date"] {
+%form-input {
     font-family: $primary-font-family;
     font-size: 0.95rem;
     font-weight: 400;
@@ -18,6 +15,7 @@ input[type="date"] {
 }
 
 select {
+    @extend %form-input;
     //   Remove the default arrow
     appearance: none;
     //   This is the arrow icon
@@ -27,10 +25,17 @@ select {
     background-size: 0.4rem;
     background-color: $background-color;
     padding: 0 1.25rem;
+
+    * {
+        @extend %form-input;
+    }
 }
 
 input[type="submit"] {
-    @include mediaSm {
-        height: 40px;
-    }
+    @extend %form-input;
+}
+
+input[type="date"] {
+    @extend %form-input;
+    appearance: none;
 }
