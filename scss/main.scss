@@ -53,7 +53,7 @@ nav {
         "hero-title hero-image"
         "form hero-image";
     grid-template-columns: 1fr 2fr;
-    gap: 1rem;
+    gap: 1rem 2rem;
     height: calc(100% - 120px);
 
     &-title {
