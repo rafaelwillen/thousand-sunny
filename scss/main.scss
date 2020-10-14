@@ -151,6 +151,31 @@ nav {
     .section-description * {
         margin-bottom: 1rem;
     }
+
+    &.reversed {
+        flex-direction: row-reverse;
+        @include mediaMd {
+            flex-direction: column;
+        }
+    }
+
+    @include mediaMd {
+        flex-direction: column;
+
+        .section-img {
+            width: 60%;
+        }
+    }
+
+    @include mediaSm {
+        .section-description h2 {
+            text-align: center;
+        }
+
+        .section-img {
+            display: none;
+        }
+    }
 }
 
 .text-along-img {
@@ -159,7 +184,6 @@ nav {
 
 .text-along-img.reversed {
     @extend %text-along-img;
-    flex-direction: row-reverse;
 }
 
 /* #endregion */
