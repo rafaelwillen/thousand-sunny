@@ -1,62 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thousand Sunny | Home</title>
-    <link rel="stylesheet" href="./css/main.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Mulish:wght@300;400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/49830dd683.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Mulish:wght@300;400;500&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/49830dd683.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <nav class="my-1">
-                <img src="./images/logo.png" alt="logo" class="logo">
-                <ul class="nav-links">
-                    <li ><a class="current-link" href="#">Home</a></li>
-                    <li><a class="light-link" href="#">Destinations</a></li>
-                    <li ><a class="light-link" href="#">About</a></li>
-                    <li ><a class="light-link" href="#">Partner</a></li>
-                    <li ><a class="btn-light" href="#">Login</a></li>
-                    <li ><a class="btn-primary" href="#">Register</a></li>
-                </ul>
-            </nav>
-            <div class="hero my-1">
-                <h1 class="hero-title xl-heading">
-                    Explore and Travel
-                </h1>
-                <img src="./images/header-image.png" alt="Explore and travel" class="hero-image">
-                <form class="form">
-                    <h4 class="sm-heading">Holiday finder</h4>
-                    <div class="divider"></div>
-                    <select class="select1" name="location" >
-                        <option value="0" selected disabled hidden>Location</option>
-                        <option value="america">America</option>
-                        <option value="europe">Europe</option>
-                        <option value="asia">Asia</option>
-                        <option value="africa">Africa</option>
-                    </select>
-                    <select name="activity" class="select2" >
-                        <option value="0" selected disabled hidden>Activity</option>
-                        <option value="act-1">Activity 1</option>
-                        <option value="act-2">Activity 2</option>
-                        <option value="act-3">Activity 3</option>
-                        <option value="act-4">Activity 4</option>
-                    </select>
-                    <select name="grade" class="select3" >
-                        <option value="0" selected disabled hidden>Grade</option>
-                        <option value="grd-1">1st Grade</option>
-                        <option value="grd-2">2nd Grade</option>
-                        <option value="grd-3">3rd Grade</option>
-                        <option value="grd-4">4th Grade</option>
-                    </select>
-                    <input type="date" name="date" >
-                    <input type="submit" value="Explore" class="btn-primary">
-                </form>
-            </div>
-        </header>
-        
+      <header>
+        <nav class="my-1">
+          <img src="./images/logo.png" alt="logo" class="logo" />
+          <ul class="nav-links">
+            <li><a class="current-link" href="#">Home</a></li>
+            <li><a class="light-link" href="#">Destinations</a></li>
+            <li><a class="light-link" href="#">About</a></li>
+            <li><a class="light-link" href="#">Partner</a></li>
+            <li><a class="btn-light" href="#">Login</a></li>
+            <li><a class="btn-primary" href="#">Register</a></li>
+          </ul>
+        </nav>
+        <div class="hero my-1">
+          <h1 class="hero-title xl-heading">Explore and Travel</h1>
+          <img
+            src="./images/header-image.png"
+            alt="Explore and travel"
+            class="hero-image"
+          />
+          <form class="form">
+            <h4 class="sm-heading">Holiday finder</h4>
+            <div class="divider"></div>
+            <select class="select1" name="location">
+              <option value="0" selected disabled hidden>Location</option>
+              <option value="america">America</option>
+              <option value="europe">Europe</option>
+              <option value="asia">Asia</option>
+              <option value="africa">Africa</option>
+            </select>
+            <select name="activity" class="select2">
+              <option value="0" selected disabled hidden>Activity</option>
+              <option value="act-1">Activity 1</option>
+              <option value="act-2">Activity 2</option>
+              <option value="act-3">Activity 3</option>
+              <option value="act-4">Activity 4</option>
+            </select>
+            <select name="grade" class="select3">
+              <option value="0" selected disabled hidden>Grade</option>
+              <option value="grd-1">1st Grade</option>
+              <option value="grd-2">2nd Grade</option>
+              <option value="grd-3">3rd Grade</option>
+              <option value="grd-4">4th Grade</option>
+            </select>
+            <input type="date" name="date" />
+            <input type="submit" value="Explore" class="btn-primary" />
+          </form>
+        </div>
+      </header>
+
+      <main class="my-5">
+        <br />
+        <section class="text-along-img my-4">
+          <img
+            src="./images/section-image-1.png"
+            alt="Explore the World"
+            class="section-img"
+          />
+          <div class="section-description">
+            <h2 class="lg-heading">A new way to explore the world</h2>
+            <p class="lead-text">
+              For decades travellers have reached for Lonely Planet books when
+              looking to plan and execute their perfect trip, but now they can
+              also let Lonely Planer Experience lead the way
+            </p>
+            <a href="" class="btn-primary">Learn More</a>
+          </div>
+        </section>
+        <br />
+        <section class="text-along-img reversed my-4">
+          <img
+            src="./images/section-image-2.png"
+            alt="Explore the World"
+            class="section-img"
+          />
+          <div class="section-description">
+            <h2 class="lg-heading">Guides by Thousand Sunny</h2>
+            <p class="lead-text">
+              Pocked with tips and advice from our on-the-ground experts, our
+              cities guides app (iOS and Android) is the ultimate resource
+              before and during a trip
+            </p>
+            <a href="#" class="btn-primary">Download</a>
+          </div>
+        </section>
+      </main>
     </div>
-</body>
+  </body>
 </html>
